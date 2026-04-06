@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="100%" height="100%" fill="white"/>
+
+  <text x="450" y="28" text-anchor="middle" fill="#1a1a1a" font-size="20" font-weight="bold">remove_() Case 3 &#x2014; Two Children (Steps 1 &amp; 2)</text>
+  <text x="450" y="48" text-anchor="middle" fill="#777" font-size="12">Find the in-order successor, then copy its value into the node</text>
+
+  <!-- Variable Key -->
+  <rect x="30" y="60" width="550" height="42" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="42" y="78" fill="#333" font-size="11" font-weight="bold">Variable Key</text>
+
+  <rect x="42" y="86" width="10" height="10" rx="2" fill="#e74c3c"/>
+  <text x="58" y="96" fill="#555" font-size="10" font-family="Consolas, monospace">node</text>
+  <text x="120" y="96" fill="#555" font-size="10">= node to remove (50)</text>
+
+  <rect x="290" y="86" width="10" height="10" rx="2" fill="#8e44ad"/>
+  <text x="306" y="96" fill="#555" font-size="10" font-family="Consolas, monospace">successor</text>
+  <text x="380" y="96" fill="#555" font-size="10">= in-order successor (60)</text>
+
+  <!-- ================================================================ -->
+  <!-- INITIAL STATE — tree on right -->
+  <!-- ================================================================ -->
+  <text x="750" y="76" text-anchor="middle" fill="#888" font-size="11">remove(50) from this tree:</text>
+
+  <circle cx="750" cy="112" r="20" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="750" y="117" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">50</text>
+
+  <line x1="734" y1="128" x2="690" y2="160" stroke="#bdc3c7" stroke-width="2"/>
+  <line x1="766" y1="128" x2="810" y2="160" stroke="#bdc3c7" stroke-width="2"/>
+
+  <circle cx="690" cy="176" r="16" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="690" y="181" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">30</text>
+
+  <circle cx="810" cy="176" r="16" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="810" y="181" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">70</text>
+
+  <line x1="798" y1="190" x2="775" y2="214" stroke="#8e44ad" stroke-width="2.5"/>
+  <line x1="822" y1="190" x2="845" y2="214" stroke="#bdc3c7" stroke-width="1.5"/>
+
+  <circle cx="775" cy="230" r="14" fill="#8e44ad" stroke="#6c3483" stroke-width="2"/>
+  <text x="775" y="235" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">60</text>
+  <text x="775" y="254" text-anchor="middle" fill="#8e44ad" font-size="9" font-weight="bold">successor</text>
+
+  <circle cx="845" cy="230" r="14" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  <text x="845" y="235" text-anchor="middle" fill="#2c3e50" font-size="10" font-weight="bold">80</text>
+
+  <!-- ================================================================ -->
+  <!-- STEP 1: Find successor -->
+  <!-- ================================================================ -->
+  <rect x="30" y="130" width="550" height="28" rx="6" fill="#1e1e1e"/>
+  <text x="45" y="150" fill="#4ec9b0" font-size="12" font-family="Consolas, monospace">Node* <tspan fill="#9cdcfe">successor</tspan> = <tspan fill="#dcdcaa">find_min_</tspan>(node-><tspan fill="#9cdcfe">right</tspan>);  <tspan fill="#6a9955">// successor = 60</tspan></text>
+
+  <rect x="30" y="166" width="14" height="14" rx="3" fill="#8e44ad"/>
+  <text x="37" y="177" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">1</text>
+  <text x="50" y="177" fill="#8e44ad" font-size="12" font-weight="bold">Find the in-order successor</text>
+
+  <text x="50" y="198" fill="#555" font-size="11">find_min_(node&#x2192;right) starts at 70, walks left &#x2192; finds 60</text>
+  <text x="50" y="216" fill="#555" font-size="11">60 is the smallest value in the right subtree &#x2014; the perfect replacement</text>
+
+  <!-- ================================================================ -->
+  <!-- STEP 2: Copy value -->
+  <!-- ================================================================ -->
+  <rect x="30" y="238" width="550" height="28" rx="6" fill="#1e1e1e"/>
+  <text x="45" y="258" fill="#9cdcfe" font-size="12" font-family="Consolas, monospace">node-><tspan fill="#9cdcfe">data</tspan> = successor-><tspan fill="#9cdcfe">data</tspan>;  <tspan fill="#6a9955">// overwrite 50 with 60</tspan></text>
+
+  <rect x="30" y="274" width="14" height="14" rx="3" fill="#2980b9"/>
+  <text x="37" y="285" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">2</text>
+  <text x="50" y="285" fill="#2980b9" font-size="12" font-weight="bold">Copy the successor&#x2019;s value into the node</text>
+
+  <text x="50" y="306" fill="#555" font-size="11">The node STAYS in place &#x2014; only its data changes from 50 to 60</text>
+  <text x="50" y="324" fill="#555" font-size="11">No pointers are modified. The tree structure is unchanged.</text>
+
+  <!-- Show the overwrite visually -->
+  <rect x="50" y="340" width="220" height="50" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+
+  <text x="70" y="362" fill="#888" font-size="10">before:</text>
+  <circle cx="130" cy="366" r="16" fill="#e74c3c" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="130" y="371" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">50</text>
+
+  <text x="162" y="368" fill="#2980b9" font-size="16">&#x2192;</text>
+
+  <text x="185" y="362" fill="#888" font-size="10">after:</text>
+  <circle cx="240" cy="366" r="16" fill="#8e44ad" stroke="#6c3483" stroke-width="2"/>
+  <text x="240" y="371" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">60</text>
+
+  <!-- Key insight -->
+  <rect x="300" y="340" width="280" height="50" rx="8" fill="#fff3e0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="440" y="361" text-anchor="middle" fill="#e65100" font-size="12" font-weight="bold">But now there are TWO 60s!</text>
+  <text x="315" y="381" fill="#555" font-size="11">The original 60 still exists &#x2192; Step 3 deletes it</text>
+
+  <!-- Arrow to part 2 -->
+  <text x="450" y="426" text-anchor="middle" fill="#888" font-size="11" font-style="italic">Continued in Part 2: Delete the successor...</text>
+</svg>
