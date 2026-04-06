@@ -1,4 +1,4 @@
-# CT15 -- Binary Search Trees: Day 2 (Remove)
+# CT16 -- Binary Search Trees: Day 2 (Remove)
 
 ## Overview
 
