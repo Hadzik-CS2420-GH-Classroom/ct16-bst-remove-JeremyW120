@@ -198,5 +198,6 @@ Node* BinarySearchTree::remove_(Node* node, int value, bool& removed) {
     //         c. recursively remove the successor from the right subtree
     //
     //   Return node at the end
+    if (!node) { return; }
     return nullptr;
 }
